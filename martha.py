@@ -165,9 +165,9 @@ if file is not None:
     entrer["Date"] = pd.to_datetime(entrer["Date"], errors = "coerce")
     sortie["Date"] = pd.to_datetime(sortie["Date"], errors = "coerce")
 
-    # Extraire le mois
-    entrer["Mois"] = entrer["Date"].dt.strftime("%B")  #entrer["Date"].dt.month
-    sortie["Mois"] = sortie["Date"].dt.strftime("%B")  #.dt.month_name(locale= "fr_FR")
+    # Extraire le mois et année ensemble
+    entrer["Mois"] = entrer["Date"].dt.strftime("%B %Y")  #entrer["Date"].dt.month ou entrer["Date"].dt.strftime("%B")
+    sortie["Mois"] = sortie["Date"].dt.strftime("%B %Y")  #.dt.month_name(locale= "fr_FR")
 
     #
 
@@ -298,7 +298,7 @@ if file is not None:
     with col9 :
         yearly_enter = entrer.groupby("Année", as_index= False)["Quantité"].sum()
 
-        fig_seven = px.line(yearly_enter, x="Année", y="Quantité", text="Quantité", title="La valeur totale des achats par Ans (Pcs)")
+        fig_seven = px.line(yearly_enter, x="Année", y="Quantité", text= "Quantité", title="La valeur totale des achats par Ans (Pcs)")
         fig_seven.update_traces(textposition = 'top center')
         st.plotly_chart(fig_seven)
 
