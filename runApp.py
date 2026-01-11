@@ -56,7 +56,7 @@ def fermer_fenetre():
 root = Tk()
 root.wm_attributes("-alpha", 1)
 ttk.Style().configure("TP.Frame", background= "#fd0309")
-root.title("Tecno DRC Business analytic")
+root.title("Shop Business analysis")
 root.geometry('500x400+500+180')
 root.iconbitmap(resource_path("images/dashboard_icon_182989.ico"))
 import threading
@@ -109,7 +109,7 @@ def open_dashboard():
     threading.Thread(target= run_streamlit).start()
 
 def ouvrir_lien():
-    webbrowser.open("https://tecno-feature-phone-analyse.streamlit.app/")
+    webbrowser.open("https://easyentreprise-shop-analysis-martha-daujgn.streamlit.app/")
 
 
 ## Frame tkinter
@@ -120,7 +120,7 @@ foot = ttk.Frame(root, width= 500, height= 20, style = "ZF.TFrame")
 
 # Profils
 
-ttk.Label(head, text="""   TECNO BUSINESS CHANNEL 
+ttk.Label(head, text="""   SHOPS BUSINESS ANALYSIS 
             DASHBOARD""", width= 80, style= "SL.TLabel").place(x= 110, y= 10)
 ttk.Label(head, text= "Rodrigue NSINSULU ", style= "YL.TLabel", width= 20, image= profil, compound= TOP).place(x= 5, y= 2)
 ttk.Label(body, style= "YL.TLabel", width= 20, image= logo, compound= TOP).place(x= 437, y= 335)
