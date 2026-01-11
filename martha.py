@@ -18,7 +18,7 @@ from openpyxl.utils import range_boundaries
 
 # Config page
 st.set_page_config(
-    page_title="Tecno Business Analytics", 
+    page_title="SHOP BUSINESS ANALYSIS", 
     layout="wide", 
     page_icon=":material/bar_chart:"
 )
