@@ -1,0 +1,1 @@
+Ce projet comporte un environement virtuel au nom de "python -m venv .venv/ShopAnalysis"
