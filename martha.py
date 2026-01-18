@@ -413,7 +413,7 @@ if file is not None:
 
         groupe_by_achat = ach_selector.groupby("Référence", as_index= False)["Quantité"].sum()
 
-        fig_fifteen = px.bar(groupe_by_achat, x="Référence", y="Quantité", text="Quantité", color="Quantité")
+        fig_fifteen = px.bar(groupe_by_achat, x="Référence", y="Quantité", text="Quantité", color="Référence")
         fig_fifteen.update_traces(textposition = 'outside')
         st.plotly_chart(fig_fifteen)
 
@@ -428,7 +428,7 @@ if file is not None:
     
     with col15 :
         # Sortie par catégories avec selection
-        st.text("2.3.2. Ventes par catégories")
+        st.text("2.3.3. Ventes par catégories")
 
         category_sortie = date_sortie["Catégorie"].unique()
         all_sortie = ["Toutes catégories"] + sorted(date_sortie["Catégorie"].dropna().unique().tolist())
@@ -443,7 +443,7 @@ if file is not None:
         
         groupe_by_vente = sortie_selector.groupby("Référence", as_index= False)["Quantité"].sum()
 
-        fig_seventeen = px.bar(groupe_by_vente, x="Référence", y="Quantité", text="Quantité", color="Quantité")
+        fig_seventeen = px.bar(groupe_by_vente, x="Référence", y="Quantité", text="Quantité", color="Référence")
         fig_seventeen.update_traces(textposition = 'outside')
         st.plotly_chart(fig_seventeen)
 

@@ -71,12 +71,24 @@ if os.path.exists(screenx_path):
 else:
     print(f"⚠️ Fichier image introuvable : {screenx_path}")
 #--------------------------------------------------------------------------
-profil = load_image("images/rodrigue-N.png", max_width=60, max_height=60) 
+profil = load_image("images/Rodrigue folio-1.png", max_width=60, max_height=60) 
 #--------------------------------------------------------------------------
 logo = load_image("images/easy-logo.jpg", max_width=60, max_height=60) 
 #--------------------------------------------------------------------------
 close = load_image("images/close.png", max_width=50, max_height=50) 
 #--------------------------------------------------------------------------
+
+######################################
+# Chargement sécurisé de l'image
+#####
+
+icon_path = resource_path("images/dashboard_12524146.png")
+
+# Vérifie si le fichier existe avant de l'ouvrir
+if os.path.exists(icon_path):
+    root.iconphoto(False, PhotoImage(file=icon_path))
+else:
+    print(f"⚠️ Fichier image introuvable : {icon_path}")
 
 
 # Configuration 
