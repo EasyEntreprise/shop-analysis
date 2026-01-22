@@ -61,25 +61,8 @@ with ferm:
 
 with rederm:
     # ------------------------------
-    # 🔄 Bouton Redémarrer (avec confirmation)
-    # ------------------------------
-    if "confirm_restart" not in st.session_state:
-        st.session_state.confirm_restart = False
+    pass
 
-    if st.session_state.confirm_restart:
-        st.warning("❗ Are you sure you want to restart the application ? ")
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("✅ Yes, restart "):
-                st.info("🔄 Restarting the application...")
-                time.sleep(1)
-                st.experimental_rerun()
-        with col2:
-            if st.button("❌ No, cancel"):
-                st.session_state.confirm_restart = False
-    else:
-        if st.button("🔄 Restart application "):
-            st.session_state.confirm_restart = True
 st.markdown("___")
 
 ####################################
